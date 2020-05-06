@@ -63,6 +63,12 @@ localStorage
 const dataIndex = event.target.dataset.index; // access an events dataset index
 function populateList(plates = [], platesList) {  } // set parameter plates as a default array - prevents crashing if in the future you forget it to assign it
 
+
+
+  const width = element.offsetWidth; // width of and element
+  const height = element.offsetHeight; // height of and element
+  const { offsetWidth: width, offsetHeight: height } = hero; // above two lines destructured into one line
+
 platesList.innerHTML = plates.map((plate, i) => {
   return `
     <li>

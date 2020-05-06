@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="container">
+		.item.item${$}*3
+		<div class="item item1">1</div>
+		<div class="item item2">2</div>
+		<div class="item item3">3</div>
+	</div>
+	
+  <style>
+  	:root {
+		--yellow: #ffc600;
+		--black: #272727;
+	}
+    .html{
+    	box-sizing: border-box;
+    }
+	.container {
+		display: grid;
+		grid-gap: 20px;
+		border: 10px solid var(--yellow)
+		grid-template-columns: 100px repeat(3, auto) 100px;
+		grid-template-rows: 1fr 1fr 200px;
+		grid-auto-flow: column; /* force columns to flow to the right rather than down*/ 
+		grid-column: span 2;
+    grid-row: span 2;
+
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-column: 2 / 6 /* is equivilant of previous 2 lines */
+    grid-column: span 2 / 5; /* span 2 columns ending at 5th */
+    grid-column: 1 / -1; /* span entire width */ 
+
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    
+
+
+   }
+  </style>
+</body>
+</html>
